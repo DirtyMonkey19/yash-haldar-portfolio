@@ -194,6 +194,56 @@
     }
   }
   
+  /* ===============================
+     About
+     =============================== */
+
+     #about .content {
+      position: relative;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      width: 95%;
+      margin: 0 auto;
+      text-align: center;          /* ensure all children align left */
+    }
+    
+    #about p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      margin-top: 1rem;
+      max-width: unset !important;  /* ✅ removes any previous max-width */
+      margin-left: 0;
+      margin-right: 0;
+    }
+    
+    @media (max-width: 768px) {
+      #about .content {
+        width: 90%;
+        padding: 1.5rem;
+        border-radius: 12px;
+        text-align: left;
+      }
+    
+      #about h2 {
+        font-size: 1.8rem;
+        text-align: center;
+      }
+    
+      #about p {
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: unset !important;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+      }
+    }
+    
+    
+    
 
   
   /* ===============================
