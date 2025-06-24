@@ -145,8 +145,17 @@ timelineObserver.observe(timeline);
 // PAGE LOAD ANIMATION
 
 window.addEventListener("DOMContentLoaded", () => {
+  const loader = document.getElementById('loader');
+  if (loader) {
+    loader.classList.add('fade-out'); // add fade effect if desired
+    setTimeout(() => {
+      loader.style.display = 'none';
+    }, 700); // adjust timing to match fade duration
+  }
+
   document.body.classList.add("loaded");
 });
+
 
 // ---------------------------
 // HAMBURGER MENU TOGGLE
