@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yash's Glitch Portfolio</title>
+  <link rel="icon" type="image/png" href="Dump-Img/icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="bg-fade"></div>
+
+<!-- NAVIGATION BAR -->
+<header class="navbar">
+  <div class="nav-container">
+    <a href="#welcome" class="logo scroll-slide left">
+      <img src="Dump-Img/icon.png" alt="Logo" class="logo-icon" />
+      Yash Haldar
+    </a>    
+
+    <!-- Hamburger Icon (only visible on mobile) -->
+    <div class="hamburger" id="hamburger">&#9776;</div>
+
+    <!-- Navigation Links -->
+    <nav id="navLinks" class="scroll-animate">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <button class="mode-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+    </nav>
+  </div>
+</header>
+
+  <!-- SECTIONS -->
+  <section id="welcome" class="section scroll-animate">
+    <div class="content">
+      <div class="terminal-intro">
+        <span class="terminal-line glitch" id="terminalText"></span>
+      </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="about" class="section scroll-slide left">
+    <div class="content">
+      <h2 class="scroll-animate">About Me</h2>
+      <div class="glass-box scroll-animate">
+        <p>
+          I’m Yash Haldar, a curious mind blending logic with creativity. As a Computer Science and Data Science undergrad at NMIMS, I spend my time decoding patterns, simulating systems, and building ideas that live on the web.
+          <br><br>
+          I love experimenting with glitchy designs, intelligent models, and tools that make people go “Whoa, that’s cool!”.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section scroll-animate">
+    <div class="content full-width-content">
+      <h2 class="scroll-animate">Projects</h2>
+      <p class="scroll-hint scroll-animate">← Scroll to explore more →</p>
+      <div class="projects-scroll-wrapper">
+        <div class="projects-container">
+          <!-- Inside your projects section (replace project-card onclick handlers) -->
+<div class="project-card scroll-slide left">
+  <a href="projects/project-shortest-path.html" class="card-link">
+    <img src="Project-Image/open-street.png" alt="Project image" />
+    <h3>Interactive Shortest Path Finder</h3>
+    <p><strong>Jan – Apr 2024</strong></p>
+    <p>Used Dijkstra’s algorithm with OpenStreetMap data to compute optimized browser-based routes using Python and Folium.</p>
+  </a>
+</div>
+
+<div class="project-card scroll-slide">
+  <a href="projects/project-blackfriday.html" class="card-link">
+    <img src="Project-Image/blackfriday.jpeg" alt="Project image" />
+    <h3>Black Friday Sales Analysis</h3>
+    <p><strong>Jul – Oct 2024</strong></p>
+    <p>Performed EDA and built XGBoost model to predict customer behavior, achieving top 10% rank on Analytics Vidhya.</p>
+  </a>
+</div>
+
+<div class="project-card scroll-slide left">
+  <a href="projects/project-loan-approval.html" class="card-link">
+    <img src="Project-Image/loan approve project.png" alt="Project image" />
+    <h3>Loan Approval Decision Model</h3>
+    <p><strong>Jul – Nov 2023</strong></p>
+    <p>Built loan approval logic using Python and decision trees; created SAS dashboards for pattern analysis.</p>
+  </a>
+</div>
+
+<div class="project-card scroll-slide">
+  <a href="projects/project-ssh-brute-force.html" class="card-link">
+    <img src="Project-Image/brute force.webp" alt="Project image" />
+    <h3>SSH Brute-Force Simulation</h3>
+    <p><strong>Jan – Mar 2025</strong></p>
+    <p>Simulated SSH brute-force attack on macOS using Hydra for ethical hacking demonstration and analysis.</p>
+  </a>
+</div>
+
+<div class="project-card scroll-slide left">
+  <a href="projects/project-movie-recommender.html" class="card-link">
+    <img src="Project-Image/movie.webp" alt="Project image" />
+    <h3>Movie Recommendation System</h3>
+    <p><strong>Jul – Oct 2024</strong></p>
+    <p>Implemented recommendation engine using cosine similarity to suggest movies based on user preferences.</p>
+  </a>
+</div>
+
+          
+  
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="education" class="section scroll-slide">
+    <div class="content">
+      <h2 class="scroll-animate">Education</h2>
+      <div class="timeline">
+        <div class="timeline-line left scroll-animate"></div>
+        <div class="timeline-item scroll-slide">
+          <div class="timeline-content glass-box scroll-animate">
+            <h3>NMIMS MPSTME</h3>
+            <p>B.Tech in Computer Science Engineering (Data Science)</p>
+            <p>2022 – 2026</p>
+            <p>CGPA: 3.35 / 4.0</p>
+          </div>
+        </div>
+        <div class="timeline-item right scroll-animate">
+          <div class="timeline-content glass-box scroll-slide">
+            <h3>Billabong High International School</h3>
+            <p>ISC: 63.80%</p>
+            <p>ICSE: 79.84%</p>
+            <p>2020 – 2022</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section scroll-animate">
+    <div class="content">
+      <h2 class="scroll-slide">Skills</h2>
+      <a href="Yash_Haldar_Resume.pdf" download class="resume-button scroll-animate">
+        Download Resume <i class="fas fa-download"></i>
+      </a>
+      <div class="skills-grid">
+        <div class="skill-card scroll-animate">
+          <h3>🖥 Programming & Databases</h3>
+          <div class="tags">
+            <span>Python</span><span>JavaScript</span><span>SQL</span><span>MongoDB</span><span>C++</span>
+          </div>
+        </div>
+        <div class="skill-card scroll-slide">
+          <h3>📦 Libraries & Frameworks</h3>
+          <div class="tags">
+            <span>TensorFlow</span><span>Scikit-learn</span><span>NumPy</span><span>Pandas</span><span>React</span>
+          </div>
+        </div>
+        <div class="skill-card scroll-animate">
+          <h3>📊 Data Science & Visualization</h3>
+          <div class="tags">
+            <span>Machine Learning</span><span>Deep Learning</span><span>Power BI</span><span>Matplotlib</span>
+          </div>
+        </div>
+        <div class="skill-card scroll-slide">
+          <h3>🛠 Tools & Platforms</h3>
+          <div class="tags">
+            <span>GitHub</span><span>VS Code</span><span>GCP</span><span>Excel</span><span>Jupyter</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section scroll-slide">
+    <div class="content">
+      <div class="glass-box scroll-slide contact-info-flex">
+        
+        <!-- Photo on Left -->
+        <div class="photo-box">
+          <img src="My-Image/profile.jpeg" alt="Yash Haldar" class="contact-photo">
+        </div>
+        
+        <!-- Text on Right -->
+        <div class="contact-text">
+          <h2>Contact Me</h2>
+          <p>Let’s connect, collaborate, or just vibe over tech and design.</p>
+          <br>
+          <p>
+            <a href="https://github.com/YashHaldar" class="contact-link" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a> |
+            <a href="https://www.linkedin.com/in/yash-haldar/" class="contact-link" target="_blank">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a> |
+            <a href="mailto:yash.haldar04@gmail.com" class="contact-link">
+              <i class="fas fa-envelope"></i> Gmail
+            </a>
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- Orb Cursor -->
+  <div class="orb-cursor">
+    <div class="orb-inner"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <!-- Trail Canvas (cursor particles) -->
+
+
+</body>
+</html>
