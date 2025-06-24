@@ -917,35 +917,74 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   
-
-  /* ===============================
-   LOADER STYLES
+/* ===============================
+   LOADER STYLING
    =============================== */
-#loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 99999;
-  transition: opacity 0.8s ease, visibility 0.8s ease;
-}
-
-.loader-content {
-  text-align: center;
-  color: var(--text);
-}
-
-.loader-logo {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
-  filter: drop-shadow(0 0 10px var(--accent));
-}
+   .loader {
+    position: fixed;
+    inset: 0;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+  }
+  
+  .spinner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .loader-logo {
+    width: 70px;
+    height: 70px;
+    animation: spin 1.3s linear infinite;
+    filter: drop-shadow(0 0 6px var(--accent));
+  }
+  
+  .loader-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    color: var(--accent);
+    text-shadow: 0 0 4px var(--accent);
+  }
+  
+  /* When body is ready */
+  body.loaded .loader {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+  
+  /* Spin animation */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Fade-out class if using early exit */
+  .loader.fade-out {
+    opacity: 0.3;
+    transition: opacity 0.6s ease;
+  }
+  
+  /* ===============================
+     MOBILE RESPONSIVE
+     =============================== */
+  @media (max-width: 768px) {
+    .loader-logo {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .loader-text {
+      font-size: 0.95rem;
+      text-align: center;
+    }
+  }  
 
 .glitch-text {
   font-size: 1.2rem;
@@ -1001,23 +1040,5 @@
   }
   10% {
     clip: rect(0, 9999px);
-  }
-}
-
-@media (max-width: 768px) {
-  .loader-logo {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 16px;
-  }
-
-  .glitch-text {
-    font-size: 1rem;
-    padding: 0 20px;
-    line-height: 1.4;
-  }
-
-  .loader-content {
-    padding: 0 10px;
   }
 }

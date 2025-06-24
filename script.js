@@ -144,17 +144,24 @@ timelineObserver.observe(timeline);
 // ---------------------------
 // PAGE LOAD ANIMATION
 
+// Fade loader on DOM ready (optional, early exit effect)
 window.addEventListener("DOMContentLoaded", () => {
-  const loader = document.getElementById('loader');
+  const loader = document.querySelector(".loader");
   if (loader) {
-    loader.classList.add('fade-out'); // add fade effect if desired
+    loader.classList.add("fade-out");
     setTimeout(() => {
-      loader.style.display = 'none';
-    }, 700); // adjust timing to match fade duration
+      loader.style.display = "none";
+    }, 600); // optional early fade, before full assets load
   }
-
-  document.body.classList.add("loaded");
 });
+
+// Ensure loader hides **after full page & images are loaded**
+window.onload = () => {
+  document.body.classList.add("loaded");
+};
+
+
+
 
 
 // ---------------------------
